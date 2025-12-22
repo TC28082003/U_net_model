@@ -27,15 +27,15 @@ The following table summarizes the architectural and training parameters for eac
 | | Kernel size | (3, 3) | (3, 3) | (3, 3) | Standard convolution kernel |
 | | Activation | ReLU | LeakyReLU | LeakyReLU | Used in hidden layers |
 | | Output activation | Sigmoid | Sigmoid | Sigmoid | Depends on output data range |
-| | Skip connections | Concatenate | Enhanced (+Extra skip) | NoSkipU-Net | Encoder–decoder feature fusion |
+| | Skip connections | Concatenate | Enhanced (+Extra skip) | Concatenate (Choice: NoSkipU-Net) | Encoder–decoder feature fusion |
 | **Training Parameters** | Loss function | MAE (L1 Loss) | Hybrid (MAE + SSIM) | MSE (L2 Loss)/RMSE | Compared under identical conditions |
 | | SSIM weight ($\lambda$) | N/A | 0.8 | N/A | Only for Hybrid loss |
 | | Optimizer | Adam ($10^{-3}, 10^{-4}, 10^{-5}$) | Adam ($10^{-3}$) | Adam ($10^{-3}$) | Same optimizer for all experiments |
-| | Noise Type | Multiplicative (Speckle) | Hybrid (Speckle + Additive) | Speckle | Type of noise used for training |
+| | Noise Type | Multiplicative (Speckle) | Hybrid (Speckle + Additive) | Additive (Speckle) | Type of noise used for training |
 ### Set 1: Baseline U-Net
 * **Architecture**: `Baseline_UNet` with standard convolutional blocks (Conv -> BN -> ReLU).
 * **Loss Function**: Mean Absolute Error (MAE/L1 Loss).
-* **Noise Level**: High speckle noise ($\sigma = 70/255$).
+* **Noise Level**: High speckle noise ($\sigma = 20/255$).
 * **Purpose**: Serves as the fundamental model to evaluate basic denoising performance.
 
 ### Set 2: Structure-Aware U-Net
@@ -59,4 +59,5 @@ The following table summarizes the architectural and training parameters for eac
 * **Python**: 3.11+
 * **Core Libraries**: TensorFlow, OpenCV, Matplotlib, Scikit-image, Pandas.
 * **Advanced Metrics**: LPIPS and PyTorch (for perceptual loss evaluation).
+
 
