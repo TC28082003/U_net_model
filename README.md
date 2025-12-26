@@ -2,7 +2,7 @@
 
 This project focuses on developing and comparing different U-Net architectures to remove speckle noise—a common characteristic in ultrasound and radar imaging. The document includes experiments with various U-net architectures based on different parameters.
 
-## 🛠 Project Workflow
+##  Project Workflow
 
 The data pipeline and processing follow these key steps:
 
@@ -12,7 +12,7 @@ The data pipeline and processing follow these key steps:
 4.  **Weighted Reconstruction**: Full images are reconstructed from overlapping patches using a Hann window and weighted average to eliminate boundary artifacts.
 5.  **Natural Blending**: A post-processing step blends the model output with the original noisy image to preserve natural details in dark regions.
 
-## 📊 Comparison of Training Sets
+##  Comparison of Training Sets
 
 The project evaluates three distinct configurations (Sets) to test different architectures and loss functions:
 The following table summarizes the architectural and training parameters for each set, highlighting the evolution from baseline to specialized models:
@@ -50,14 +50,15 @@ The following table summarizes the architectural and training parameters for eac
 * **Training Strategy**: Trained for a higher number of epochs (100–200) to compensate for the simpler architecture.
 * **Purpose**: Optimized for lower computational costs while maintaining stable denoising quality.
 
-## 📁 Directory Structure
-* `images/clean/`: Contains over 500 clean ultrasound images for training.
+##  Directory Structure
+* `images/clean/`: Contains over 500 clean ultrasound images for training. (For security reasons, the images we use cannot be uploaded)
 * `ready for label/`: Contains 47 images reserved for model testing.
 * `results_inference/`: Stores denoised outputs and comparisons for each Set.
 
-## 🚀 System Requirements
+##  System Requirements
 * **Python**: 3.11+
 * **Core Libraries**: TensorFlow, OpenCV, Matplotlib, Scikit-image, Pandas.
 * **Advanced Metrics**: LPIPS and PyTorch (for perceptual loss evaluation).
+
 
 
