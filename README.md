@@ -18,7 +18,7 @@ The project evaluates three distinct configurations (Sets) to test different arc
 The following table summarizes the architectural and training parameters for each set, highlighting the evolution from baseline to specialized models:
 
 
-| Category | Parameter | Set 1 | Set 2 | Set 3 | Description |
+| Category | Parameter | Set 1 (U-net model 2) | Set 2(U-net model 3) | Set 3(U-net model 4) | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Model Architecture** | Network type | Light U-Net | Hybrid-Loss U-Net | Shallow U-Net | Baseline encoder–decoder architecture |
 | | CNN depth (levels) | 2  | 2 | 1 | Number of encoder–decoder levels |
@@ -59,6 +59,7 @@ The following table summarizes the architectural and training parameters for eac
 * **Python**: 3.11+
 * **Core Libraries**: TensorFlow, OpenCV, Matplotlib, Scikit-image, Pandas.
 * **Advanced Metrics**: LPIPS and PyTorch (for perceptual loss evaluation).
+
 
 
 
