@@ -27,7 +27,7 @@ The following table summarizes the architectural and training parameters for eac
 | | Kernel size | (3, 3) | (3, 3) | (3, 3) | Standard convolution kernel |
 | | Activation | ReLU | LeakyReLU | LeakyReLU | Used in hidden layers |
 | | Output activation | Sigmoid | Sigmoid | Sigmoid | Depends on output data range |
-| | Skip connections | Concatenate | Enhanced (+Extra skip) | Concatenate (Choice: NoSkipU-Net) | Encoder–decoder feature fusion |
+| | Skip connections | Concatenate | Concatenate | Concatenate | Encoder–decoder feature fusion |
 | **Training Parameters** | Loss function | MAE (L1 Loss) | Hybrid (MAE + SSIM) | MSE (L2 Loss)/RMSE | Compared under identical conditions |
 | | SSIM weight ($\lambda$) | N/A | 0.8 | N/A | Only for Hybrid loss |
 | | Optimizer | Adam ($10^{-3}, 10^{-4}, 10^{-5}$) | Adam ($10^{-3}$) | Adam ($10^{-3}$) | Same optimizer for all experiments |
@@ -59,6 +59,7 @@ The following table summarizes the architectural and training parameters for eac
 * **Python**: 3.11+
 * **Core Libraries**: TensorFlow, OpenCV, Matplotlib, Scikit-image, Pandas.
 * **Advanced Metrics**: LPIPS and PyTorch (for perceptual loss evaluation).
+
 
 
 
