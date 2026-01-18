@@ -30,8 +30,8 @@ The following table summarizes the architectural and training parameters for eac
 | | Skip connections | Concatenate | Concatenate | Concatenate | Encoder–decoder feature fusion |
 | **Training Parameters** | Loss function | MAE (L1 Loss) | Hybrid (MAE + SSIM) | MSE (L2 Loss)/RMSE | Compared under identical conditions |
 | | SSIM weight ($\lambda$) | N/A | 0.8 | N/A | Only for Hybrid loss |
-| | Optimizer | Adam ($10^{-3}, 10^{-4}, 10^{-5}$) | Adam ($10^{-3}$) | Adam ($10^{-3}$) | Same optimizer for all experiments |
-| | Noise Type | Multiplicative Speckle | Speckle | Speckle | Type of noise used for training |
+| | Optimizer | Adam (10^{-4}, 10^{-5}$) | Adam ($10^{-3}$) | Adam ($10^{-3}$) | Same optimizer for all experiments |
+| | Noise Type | Speckle | Speckle | Speckle | Type of noise used for training |
 ### Set 1: U-Net model 2 (light)
 * **Architecture**: `Baseline_UNet` with standard convolutional blocks (Conv -> BN -> ReLU).
 * **Loss Function**: Mean Absolute Error (MAE/L1 Loss).
@@ -59,6 +59,7 @@ The following table summarizes the architectural and training parameters for eac
 * **Python**: 3.11+
 * **Core Libraries**: TensorFlow, OpenCV, Matplotlib, Scikit-image, Pandas.
 * **Advanced Metrics**: LPIPS and PyTorch (for perceptual loss evaluation).
+
 
 
 
